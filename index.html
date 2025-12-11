@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太阳能发电机新手选购指南</title>
+    <!-- 引入 Tailwind CSS 进行快速样式设计 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Alpine.js 用于交互逻辑 -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+        }
+        .component-card {
+            transition: all 0.3s ease;
+        }
+        .component-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-orange-600">☀️ SolarGuide</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#components" class="text-gray-600 hover:text-orange-500 font-medium">核心部件</a>
+                    <a href="#buying-guide" class="text-gray-600 hover:text-orange-500 font-medium">选购指南</a>
+                    <a href="#calculator" class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition">简易计算</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部 Hero 区域 -->
+    <header class="hero-bg text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">太阳能发电机新手选购指南</h1>
+            <p class="text-xl opacity-90 mb-8">必须掌握的5个核心要点 & 基础知识全解析</p>
+            <a href="#components" class="inline-block bg-white text-orange-500 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition">
+                开始学习
+            </a>
+        </div>
+    </header>
+
+    <!-- 核心部件部分 (Grid布局 + 卡片) -->
+    <section id="components" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">核心部件：基础知识解析</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">了解这些协同工作的部件，是理解太阳能发电机的第一步。</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 卡片 1 -->
+            <div class="component-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                <div class="text-orange-500 text-3xl mb-4">🔋</div>
+                <h3 class="text-xl font-bold mb-2">太阳能电池板</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    由光伏(PV)电池组成，将阳光转化为电能。通常由硅制成，光照产生电流。大多数发电机配备多块板以增加发电量。
+                </p>
+            </div>
+
+            <!-- 卡片 2 -->
+            <div class="component-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                <div class="text-orange-500 text-3xl mb-4">⚡</div>
+                <h3 class="text-xl font-bold mb-2">电池存储</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    储存多余能量以备后用。常见类型包括锂离子（高效、长寿）、铅酸和盐水电池。决定了无阳光时的可用电量。
+                </p>
+            </div>
+
+            <!-- 卡片 3 -->
+            <div class="component-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                <div class="text-orange-500 text-3xl mb-4">🔄</div>
+                <h3 class="text-xl font-bold mb-2">逆变器</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    将直流电(DC)转换为家用交流电(AC)。分为<b>组串式</b>（负责整个系统）和<b>微型逆变器</b>（独立工作，遮阴下表现更好）。
+                </p>
+            </div>
+
+            <!-- 卡片 4 -->
+            <div class="component-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                <div class="text-orange-500 text-3xl mb-4">🎛️</div>
+                <h3 class="text-xl font-bold mb-2">充电控制器</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    调节电压电流，防止过充。<b>MPPT</b>控制器比PWM效率更高，能提取最大功率，适合天气变化时使用。
+                </p>
+            </div>
+
+            <!-- 卡片 5 -->
+            <div class="component-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                <div class="text-orange-500 text-3xl mb-4">📱</div>
+                <h3 class="text-xl font-bold mb-2">显示屏与监控</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    追踪发电、存储和用电量。现代系统支持APP远程监控，提供实时数据和警报。
+                </p>
+            </div>
+
+            <!-- 卡片 6 -->
+            <div class="component-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                <div class="text-orange-500 text-3xl mb-4">🔌</div>
+                <h3 class="text-xl font-bold mb-2">其他配件</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    <b>框架与安装系统</b>确保最佳光照角度；<b>电缆与连接器</b>则是连接所有组件、防止能量损失的无名英雄。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 选购指南部分 (手风琴交互) -->
+    <section id="buying-guide" class="bg-gray-100 py-16">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">如何选择合适的太阳能发电机</h2>
+            <p class="text-center text-gray-600 mb-10">点击下方因素查看详细建议</p>
+
+            <div class="space-y-4" x-data="{ active: 1 }">
+                
+                <!-- Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button @click="active = (active === 1 ? null : 1)" class="w-full text-left px-6 py-4 font-bold flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span>1. 瓦数与功率输出 (Wattage)</span>
+                        <span x-text="active === 1 ? '−' : '+'" class="text-2xl text-orange-500"></span>
+                    </button>
+                    <div x-show="active === 1" x-collapse class="px-6 py-4 border-t border-gray-100 bg-gray-50 text-gray-700">
+                        <p>瓦数决定了您可以<b>同时</b>运行多少设备。100W的设备比50W的设备消耗更多功率。请计算您打算同时供电设备的总瓦数需求，确保发电机能承受峰值负载。</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button @click="active = (active === 2 ? null : 2)" class="w-full text-left px-6 py-4 font-bold flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span>2. 电池容量与运行时间 (Capacity)</span>
+                        <span x-text="active === 2 ? '−' : '+'" class="text-2xl text-orange-500"></span>
+                    </button>
+                    <div x-show="active === 2" x-collapse class="px-6 py-4 border-t border-gray-100 bg-gray-50 text-gray-700">
+                        <p>以瓦时(Wh)衡量。容量越高，运行时间越长。例如：1000Wh的电池理论上可以为100W的设备供电10小时。根据您的每日耗电量选择合适的容量。</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button @click="active = (active === 3 ? null : 3)" class="w-full text-left px-6 py-4 font-bold flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span>3. 便携性与尺寸</span>
+                        <span x-text="active === 3 ? '−' : '+'" class="text-2xl text-orange-500"></span>
+                    </button>
+                    <div x-show="active === 3" x-collapse class="px-6 py-4 border-t border-gray-100 bg-gray-50 text-gray-700">
+                        <p>如果是露营或应急使用，轻量化、带轮子或手柄的设计至关重要。如果是房车或家庭备用，则需考虑存放空间。紧凑型设计适合小空间。</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button @click="active = (active === 4 ? null : 4)" class="w-full text-left px-6 py-4 font-bold flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span>4. 充电效率与扩展性</span>
+                        <span x-text="active === 4 ? '−' : '+'" class="text-2xl text-orange-500"></span>
+                    </button>
+                    <div x-show="active === 4" x-collapse class="px-6 py-4 border-t border-gray-100 bg-gray-50 text-gray-700">
+                        <p>关注完全充电所需的时间。同时检查是否兼容外部太阳能电池板（扩展端口），以便在阳光较少或长途旅行时通过增加电池板来加快充电速度。</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button @click="active = (active === 5 ? null : 5)" class="w-full text-left px-6 py-4 font-bold flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span>5. 附加功能与品牌售后</span>
+                        <span x-text="active === 5 ? '−' : '+'" class="text-2xl text-orange-500"></span>
+                    </button>
+                    <div x-show="active === 5" x-collapse class="px-6 py-4 border-t border-gray-100 bg-gray-50 text-gray-700">
+                        <p>考虑USB接口数量、内置LED灯、蓝牙APP控制等功能。务必选择声誉好、保修范围广的品牌，这对长期使用和维护至关重要。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 互动计算器部分 -->
+    <section id="calculator" class="py-16 max-w-2xl mx-auto px-4" x-data="{ watts: 100, hours: 5, get capacity() { return this.watts * this.hours } }">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-orange-100">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                🧮 简单容量估算器
+            </h3>
+            <p class="text-sm text-gray-500 mb-6">不确定买多大的电池？输入您的设备功率和使用时长来估算。</p>
+            
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">设备功率 (瓦特 W)</label>
+                    <input type="number" x-model="watts" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:outline-none transition" placeholder="例如: 100">
+                    <p class="text-xs text-gray-400 mt-1">提示：笔记本电脑约60W，车载冰箱约50W</p>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">计划使用时长 (小时 h)</label>
+                    <div class="flex items-center space-x-4">
+                        <input type="range" min="1" max="24" x-model="hours" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                        <span class="text-gray-900 font-bold w-12" x-text="hours + 'h'"></span>
+                    </div>
+                </div>
+
+                <div class="bg-orange-50 rounded-xl p-6 mt-6 text-center">
+                    <p class="text-gray-600 text-sm mb-1">您需要的理论电池容量至少为：</p>
+                    <div class="text-4xl font-extrabold text-orange-600" x-text="capacity + ' Wh'"></div>
+                    <p class="text-xs text-gray-500 mt-2">*注：实际购买建议选择比此数值高 15-20% 的型号，以应对能量转换损耗。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h4 class="text-xl font-bold text-white mb-4">结语</h4>
+            <p class="max-w-3xl mx-auto leading-relaxed mb-8">
+                涉足太阳能发电机的世界不仅是为了省钱，更是为可持续未来做出贡献。
+                通过了解太阳能电池板、电池、逆变器等关键部件，并根据您的功率需求和便携性做出选择，
+                您的钱包和地球都会感谢您。
+            </p>
+            <div class="border-t border-gray-700 pt-8 text-sm">
+                &copy; 2023 太阳能发电机选购指南. 投资优质组件，享受绿色能源。
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
